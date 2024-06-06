@@ -19,6 +19,7 @@ class _MyInitStateState extends State<MyInitState> {
     );
     super.initState();
   }
+  @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
@@ -39,8 +40,9 @@ class _MyInitStateState extends State<MyInitState> {
           ),
     );
   }
+  // ignore: non_constant_identifier_names
   Future<void> ChangeState()async{
-    await FirebaseAuth.instance.userChanges().listen((User? user) { 
+    FirebaseAuth.instance.userChanges().listen((User? user) { 
       if(user == null)
       {
         Navigator.pushReplacement(
@@ -53,7 +55,7 @@ class _MyInitStateState extends State<MyInitState> {
       {
         Navigator.pushReplacement(
           context, 
-          MaterialPageRoute(builder: (context) => const HomePage(),
+          MaterialPageRoute(builder: (context) => HomePage(),
           ),
         );
       }

@@ -1,7 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:mynote_pro/view/create.dart';
 import 'package:mynote_pro/view/homepage.dart';
@@ -99,7 +97,7 @@ class _MyloginStateState extends State<MyloginState> {
                                         content: const Text('Sign in Successful'),
                                         actions: [
                                           TextButton(onPressed: () {
-                                            Get.offAll(() => const HomePage());
+                                            Get.offAll(() => HomePage());
                                           }, child: const Text('Ok'),),
                                         ],
                                       );
